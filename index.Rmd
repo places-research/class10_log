@@ -1,0 +1,328 @@
+---
+title: "Logística"
+subtitle: "Encontro Síncrono 10"
+author: 
+  - <br></br>Renata Oliveira
+date: '24/03/2021'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themer.css", "slides.css"]
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: solarized-light
+      countIncrementalSlides: false
+      slideNumberFormat: |
+         <div class="progress-bar-container">
+           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+           </div>
+         </div>
+
+---
+
+```{r child = "setup.Rmd"}
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+
+```{r xaringan-panelset, echo=FALSE, message=FALSE, warning=FALSE}
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(panel_tab_font_family = "sans-serif")
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+    error_text = "<i class=\"fa fa-times-circle\" style=\"color: #F94144\"></i>"
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+```{r xaringan-extra-styles, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{css include=FALSE}
+.panelset {
+   --panel-tab-foreground: currentColor;
+   --panel-tab-background: unset;
+   --panel-tab-active-foreground: currentColor;
+   --panel-tab-active-background: unset;
+   --panel-tab-active-border-color: currentColor;
+   --panel-tab-hover-foreground: currentColor;
+   --panel-tab-hover-background: unset;
+   --panel-tab-hover-border-color: currentColor;
+   --panel-tab-inactive-opacity: 0.5;
+   --panel-tabs-border-bottom: #ddd;
+   --panel-tab-font-family: Sen;
+   --panel-tab-background-color-active: #fffbe0;
+   --panel-tab-border-color-active: #023d4d;
+}
+
+.panelset .panel-tabs .panel-tab > a {
+	color: #023d4d;
+}
+
+.panelset .panel-tabs {
+  font-size: 0.5rem;
+}
+```
+
+.small[
+Grupo 1: [Cadeia de suprimentos de medicamentos](https://www.youtube.com/watch?v=Tx3ERP33i_U)   
+.small[Amanda Pimenta e Pedro Henrique Reis]
+
+Grupo 2: [Digitalização do Setor automotivo](https://youtu.be/kolxomSVSrQ)   
+.small[Ana Luiza Jorge, Amanda Harumy, Camila Correa, Flávia Sakai e Larissa Costa]
+
+Grupo 3:  [Fluxo financeiro e digitalização](https://youtu.be/1BzRM178vyU)   
+.small[Camila Pacífico, Maria Fernanda e Rafaela Cristina]
+
+Grupo 4: [Economia da recorrência](https://www.youtube.com/watch?v=NZeoI-E3oJ4&feature=youtu.be)   
+.small[Gabriel Gestaldi, Arthur, Gustavo Fontana e Lorena Rodrigues]
+
+Grupo 5: [Varejo e digitalização - E-commerce](https://www.youtube.com/watch?v=kfa7IScuC4c&feature=youtu.be&ab_channel=HarleyViana)   
+.small[Raphael Nicolete, Harley Viana, Helen Amorim e Larissa Freitas]
+
+Grupo 6: [Aplicativo de entregas de bebidas](https://youtu.be/YwNbxe83Ejs)  
+.small[Felipe Caxito, Lucas Teixeira, Matheus Troian, Renato Canuto e Patrícia Morozesk]
+
+Grupo 7: [Uber]()   
+.small[Leidiane Soares, Naiara Veloso, Mateus Mendes, Ana Paula, Vitor Vieira]
+]
+
+---
+class: center, middle
+
+## Retrospecto
+
+---
+
+## Definições
+
+### Logística
+
+.midi[
+.question[
+“**Logística** é dispor a **mercadoria ou o serviço** certo, no **lugar** certo, no **tempo** certo e nas **condições desejadas**, ao mesmo tempo em que fornece a **maior contribuição à empresa**”. 
+(Ballou, 2001)
+]
+]
+
+### Gestão Cadeia de Suprimentos
+
+.question[
+.midi[
+**Cadeia de suprimentos** é a estrutura consolidada e integrada, em níveis estratégico, tático e operacional, entre agentes de produção, mercadológicos, logísticos e sociedade, para que seja possível coordenar as operações de maneira a garantir a gestão orientada à logística, tendo como objetivo o _trade-off_ entre **responsividade** e **eficiência**, além de garantia de um contexto sustentável de desenvolvimento por ações **socialmente responsáveis** e **resilientes.** 
+]
+]
+
+---
+
+## Fatores-chave de desempenho
+
+**- Instalações**   
+**- Estoques**    
+**- Sourcing**   
+- Transportes   
+- Informação   
+- Pricing
+
+---
+
+class: center, middle
+
+# Estoques, Armazenagem e Localização
+
+---
+
+# Gestão de estoques
+
+## Definição 
+
+“Os estoques são recursos ociosos que possuem valor econômico.” 
+.small[
+Joseph G. Monks: Administração da Produção
+]
+
+“Entende-se por estoque quaisquer quantidades de bens físicos que sejam conservados, de forma improdutiva, por algum intervalo de tempo.”
+.small[
+Daniel Moreira:  Administração da Produção e Operações
+]
+
+---
+
+# Gestão de estoques
+
+## Definição 
+
+“Estoques são acúmulos de materiais entre fases dos processos de transformação, que proporcionam um grau de independência entre as fases”
+.small[
+Henrique L.Correa: Administração da Produção e Operações
+]
+
+Estoques são materiais ou produtos que ficam fisicamente disponíveis pela empresa, até o momento de ingressarem no processo produtivo ou seguirem para a comercialização direta ao consumidor final. Os estoques podem ser de matérias-primas e outros insumos, produtos em processos, produtos acabados disponíveis para a comercialização e todos os demais materiais e insumos que a empresa utiliza e que necessitam estar armazenados nas suas dependências.
+
+---
+
+## Por que surgem os estoques?
+
+- Impossível  ou inviável coordenar suprimento e demanda:
+  - capacidade
+  - informação
+  - custo de obtenção
+  - restrições tecnológicas
+  
+- Especular com os estoques:
+  - escassez
+  - oportunidade
+  
+---
+
+
+
+## Por que surgem os estoques?
+
+- Incerteza de previsões de suprimento e/ou demanda: 
+  - estoques de segurança
+
+- Preencher o “pipeline”  - canais de distribuição
+
+---
+
+## Razões para existência de estoques
+
+- compras ou produção de forma mais econômica 
+- redução de fretes
+- prevenir incertezas (desabastecimentos)
+- reduzir efeitos de sazonalidades
+- diferentes ritmos de produção entre fases
+- reduzir custos de ociosidades
+- melhor atendimento a consumidores
+
+
+---
+
+## Tipos de estoque
+
+- Estoque Isolador ou Estoque de Segurança - tem como função compensar as incertezas inerentes ao fornecimento e demanda. Ex: máquina problemática!!!
+
+- Estoque de Ciclo - ocorre porque um ou mais estágios na operação não podem fornecer todos os itens que produzem simultaneamente. Ex: fabricações em batelada - Padaria / Processos Químicos.
+
+- Estoque de Antecipação - ocorre principalmente nos produtos de grande variação de demanda. Ex: chocolate, sorvete, cerveja.
+
+- Estoque no Canal de Distribuição - ocorrem porque o material não pode ser transportado instantaneamente entre o ponto de produção e o ponto de venda.
+
+---
+
+## Influência de estoques na competitividade das empresas
+
+- Influência nos custos;
+- Influência na velocidade de entrega;
+- Influência na confiabilidade de entregas;
+- Influência sobre a flexibilidade de saídas - quando se tem estoques de diferentes produtos tem-se flexibilidade para atender as diferentes necessidades, mas perde-se flexibilidade em qualquer mudança de pedido feita pelo cliente.
+- Influência sobre a qualidade do produto - a produção com qualidade reduz o nível de estoque da empresa pois corre-se um risco menor de se perder o material.
+- Influência sobre o serviço prestado ao cliente.
+
+---
+
+## Decisões de estoques
+
+**Quanto pedir**
+
+  - Custos de estoques   
+  - Lote econômico de compras
+  
+**Quando pedir**
+
+  - Revisões contínuas e periódicas
+  
+**Como controlar o sistema**
+
+  - Curva ABC   
+  - Inventário   
+  - planejamento de estoques de segurança   
+
+---
+
+## Objetivos da gestão de estoques
+
+-	Cálculo do nível de estoque cíclico   
+-	Cálculo do nível de estoque de segurança   
+-	Determinação de Lote Econômico de Compra   
+-	Atualização de inventário   
+-	Replanejamento do suprimento   
+-	Determinação do ponto de pedido   
+-	Recebimento e armazenagem de materiais   
+-	Conservar material em condições adequadas   
+-	Entregar material mediante requisição   
+-	Documentação   
+-	Organização do almoxarifado   
+
+---
+
+## Principais incertezas que impactam o planejamento de estoques
+
+- Incertezas quanto à demanda (consumo)   
+- Incertezas em relação à entrega (atrasos, por exemplo)   
+
+---
+
+[Meu Locker](https://www.linkedin.com/feed/update/urn:li:activity:6772601182000087040/)
+
+---
+
+<iframe width="1147" height="645" src="https://www.youtube.com/embed/4DKrcpa8Z_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+<iframe width="1147" height="645" src="https://www.youtube.com/embed/Ox05Bks2Q3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+
+## Reorganização das entregas
+
+.small[
+Pontos|	Entrega|	Atividade
+------|--------|-----------
+10| 10/02 | Estudos Autônomos 1 (entregue)
+20|	20/02	| Projeto incremental 1 (entregue)
+10| 16/03 | Estudos Autônomos 2 (entregue)
+10| 23/03 | Estudos Autônomos 3 (entregue)
+10| 30/03 | Estudos Autônomos 4 (postado)
+10| 07/04 | Estudos Autônomos 5 (a ser postado)
+30|	14/04 |	Projeto incremental 2 (a ser postado)
+10| 14/04 | Engajamento
+TOTAL:| |	100 pontos
+]
+---
+
+## Atividades das semanas
+
+- Estudos autônomos 4
+
+---
+
+class: center, middle
+
+.larger[
+**DÚVIDAS?**
+]
